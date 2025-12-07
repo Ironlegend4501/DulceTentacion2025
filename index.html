@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dulce Tentación | Pastelería Artesanal en Panamá</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO mejorado -->
+    <meta name="description" content="Dulce Tentación: Pastelería artesanal en Panamá con pasteles personalizados, cupcakes y postres únicos para toda ocasión. Calidad, creatividad y sabor garantizados." />
+    <meta name="keywords" content="pastelería Panamá, dulces, tortas, cupcakes, postres artesanales, repostería, pedidos de pasteles" />
+    <meta name="author" content="Dulce Tentación" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph: para redes sociales y mejor vista en buscadores -->
+    <meta property="og:title" content="Dulce Tentación | Pastelería Artesanal" />
+    <meta property="og:description" content="Endulzando tus mejores momentos con pasteles, cupcakes y postres personalizados." />
+    <meta property="og:image" content="img/hero-pastel.jpg" />
+    <meta property="og:url" content="https://ironlegend4501.github.io/DulceTentacion/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Colores del navegador -->
+    <meta name="theme-color" content="#ff6fa8">
+    <meta name="handheldfriendly" content="true">
+    <meta name="mobileoptimized" content="300">
+
+    <style>
+        :root {
+            --color-principal: #ff6fa8;
+            --color-secundario: #ffb6d9;
+            --color-oscuro: #3c2440;
+            --color-claro: #fff7fb;
+            --color-boton: #ff4780;
+            --color-boton-hover: #e23b70;
+            --sombra-suave: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: linear-gradient(180deg, #ffeaf4, #fff7fb);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        header {
+            background: #ffffffcc;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #ffd3e8;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        .barra {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo-icono {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #fff, #ff6fa8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--sombra-suave);
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .logo-texto {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-texto strong {
+            font-size: 1.1rem;
+            color: var(--color-oscuro);
+        }
+
+        .logo-texto span {
+            font-size: 0.75rem;
+            color: #777;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 0.75rem;
+            list-style: none;
+            font-size: 0.9rem;
+        }
+
+        nav a {
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        nav a:hover {
+            background: var(--color-principal);
+            color: #fff;
+        }
+
+        .hero {
+            padding: 2.5rem 0 2rem 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .hero-texto h1 {
+            font-size: 2rem;
+            color: var(--color-oscuro);
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-texto p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #fff;
+            padding: 0.15rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            border: 1px solid #ffd3e8;
+            margin-bottom: 0.5rem;
+        }
+
+        .badge span {
+            font-size: 1rem;
+        }
+
+        .hero-botones {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.6rem 1.2rem;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: var(--sombra-suave);
+            transition: transform 0.1s, box-shadow 0.1s, background 0.1s;
+        }
+
+        .btn-primario {
+            background: var(--color-boton);
+            color: #fff;
+        }
+
+        .btn-primario:hover {
+            background: var(--color-boton-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 20px rgba(255, 71, 128, 0.35);
+        }
+
+        .btn-secundario {
+            background: #fff;
+            color: var(--color-oscuro);
+        }
+
+        .btn-secundario:hover {
+            background: #ffe1f0;
+        }
+
+        .hero-imagen {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-card {
+            background: #fff;
+            padding: 1.25rem;
+            border-radius: 1.5rem;
+            box-shadow: var(--sombra-suave);
+            text-align: center;
+            max-width: 280px;
+        }
+
+        .hero-card h2 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            color: var(--color-oscuro);
+        }
+
+        .hero-card p {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-img-portada {
+            width: 220px;
+            height: 150px;
+            border-radius: 1rem;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+
+        .hero-decor {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #fff, #ffb6d9);
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .hero-decor-1 {
+            top: -10px;
+            left: 10px;
+        }
+
+        .hero-decor-2 {
+            bottom: -10px;
+            right: 20px;
+        }
+
+        main {
+            padding-bottom: 3rem;
+        }
+
+        section {
+            padding: 1.75rem 0;
+        }
+
+        section h2 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-oscuro);
+        }
+
+        section p.descripcion {
+            max-width: 600px;
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 1.25rem;
+        }
+
+        .tarjetas-mision-vision {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .tarjeta {
+            background: #fff;
+            border-radius: 1.2rem;
+            padding: 1rem 1.25rem;
+            box-shadow: var(--sombra-suave);
+        }
+
+        .tarjeta h3 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+            color: var(--color-oscuro);
+        }
+
+        .tarjeta p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .valores-lista {
+            display: grid;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+        }
+
+        .valor-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .valor-icono {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--color-secundario);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .productos-layout {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .productos-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .producto {
+            background: #fff;
+            border-radius: 1.1rem;
+            box-shadow: var(--sombra-suave);
+            padding: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .producto-header {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .producto-header img {
+            width: 120px;
+            height: 90px;
+            border-radius: 0.8rem;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .producto-info h3 {
+            font-size: 1rem;
+            margin-bottom: 0.1rem;
+            color: var(--color-oscuro);
+        }
+
+        .producto-info p {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .producto-precio {
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            color: var(--color-boton);
+        }
+
+        .producto-boton {
+            margin-top: 0.4rem;
+        }
+
+        .badge-pequeno {
+            display: inline-block;
+            background: #fff0f6;
+            border-radius: 999px;
+            padding: 0.15rem 0.5rem;
+            font-size: 0.7rem;
+            color: var(--color-oscuro);
+            border: 1px solid #ffd3e8;
+        }
+
+        .carrito {
+            background: #fff;
+            border-radius: 1.2rem;
+            padding: 1rem;
+            box-shadow: var(--sombra-suave);
+            position: sticky;
+            top: 4.5rem;
+        }
+
+        .carrito h3 {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            color: var(--color-oscuro);
+        }
+
+        .carrito-resumen {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .carrito-resumen strong {
+            color: var(--color-boton);
+        }
+
+        .carrito-items {
+            max-height: 220px;
+            overflow-y: auto;
+            margin-bottom: 0.75rem;
+        }
+
+        .carrito-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            padding: 0.2rem 0;
+            border-bottom: 1px dashed #ffe1f0;
+        }
+
+        .carrito-item span {
+            display: inline-block;
+        }
+
+        .carrito-vacio {
+            font-size: 0.85rem;
+            color: #777;
+            font-style: italic;
+        }
+
+        .carrito-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+            padding-top: 0.4rem;
+            border-top: 1px solid #ffe1f0;
+        }
+
+        .carrito-acciones {
+            margin-top: 0.75rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .btn-mini {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.8rem;
+        }
+
+        .contacto-grid {
+            display: grid;
+            gap: 1.25rem;
+        }
+
+        form {
+            background: #fff;
+            border-radius: 1.2rem;
+            padding: 1rem 1.25rem;
+            box-shadow: var(--sombra-suave);
+        }
+
+        .form-grupo {
+            margin-bottom: 0.75rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            margin-bottom: 0.25rem;
+            color: var(--color-oscuro);
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.5rem 0.6rem;
+            border-radius: 0.7rem;
+            border: 1px solid #ffd3e8;
+            font-size: 0.85rem;
+            transition: border 0.15s, box-shadow 0.15s;
+            background: #fffdfd;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--color-principal);
+            box-shadow: 0 0 0 3px rgba(255, 111, 168, 0.2);
+        }
+
+        textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
+
+        .contacto-info {
+            font-size: 0.9rem;
+        }
+
+        .contacto-info p {
+            margin-bottom: 0.4rem;
+        }
+
+        .redes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 0.4rem;
+        }
+
+        .red {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.35rem 0.8rem;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid #ffd3e8;
+            font-size: 0.8rem;
+        }
+
+        .red span.icono {
+            font-size: 1rem;
+        }
+
+        footer {
+            border-top: 1px solid #ffd3e8;
+            padding: 1rem 0 1.5rem 0;
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        footer .fila {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer a {
+            font-weight: 500;
+            color: var(--color-boton);
+        }
+
+        .indicadores-carrito {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid #ffd3e8;
+        }
+
+        .indicadores-carrito strong {
+            color: var(--color-boton);
+        }
+
+        @media (min-width: 640px) {
+            .hero-grid {
+                grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+                align-items: center;
+            }
+
+            .tarjetas-mision-vision {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .productos-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .contacto-grid {
+                grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+            }
+        }
+
+        @media (min-width: 900px) {
+            .productos-layout {
+                grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+                align-items: flex-start;
+            }
+
+            .productos-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                font-size: 0.8rem;
+            }
+
+            .hero-texto h1 {
+                font-size: 1.6rem;
+            }
+
+            .barra {
+                gap: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header role="banner">
+        <div class="contenedor barra">
+            <div class="logo" aria-label="Logo de Dulce Tentación, pastelería artesanal">
+                <div class="logo-icono" aria-hidden="true">🍰</div>
+                <div class="logo-texto">
+                    <strong>Dulce Tentación</strong>
+                    <span>Endulzando tus mejores momentos desde 1995</span>
+                </div>
+            </div>
+
+            <nav aria-label="Menú principal del sitio">
+                <ul>
+                    <li><a href="#sobre-nosotros">Nosotros</a></li>
+                    <li><a href="#valores">Valores</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="indicadores-carrito" aria-label="Resumen del carrito de compras">
+                🛒 <span><strong id="cart-count">0</strong> ítems</span>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        <section class="hero" aria-labelledby="titulo-principal">
+            <div class="contenedor hero-grid">
+                <div class="hero-texto">
+                    <div class="badge">
+                        <span>✨</span>
+                        <span>Pastelería artesanal en Panamá</span>
+                    </div>
+                    <h1 id="titulo-principal">Dulces que convierten momentos en recuerdos inolvidables</h1>
+                    <p>
+                        En <strong>Dulce Tentación</strong> preparamos pasteles, cupcakes y postres personalizados
+                        con ingredientes de calidad y mucho amor, para celebrar cada ocasión como se merece.
+                    </p>
+                    <div class="hero-botones">
+                        <button class="btn btn-primario" onclick="scrollToSection('productos')">
+                            Ver menú de postres
+                        </button>
+                        <button class="btn btn-secundario" onclick="scrollToSection('contacto')">
+                            Hacer un pedido especial
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hero-imagen">
+                    <div class="hero-card">
+                        <img src="img/hero-pastel.jpg"
+                             alt="Pastel decorado de Dulce Tentación presentado como producto principal"
+                             class="hero-img-portada">
+                        <h2>Sabores que enamoran</h2>
+                        <p>Pasteles personalizados, cupcakes decorados y postres temáticos para tu celebración.</p>
+                    </div>
+                    <div class="hero-decor hero-decor-1" aria-hidden="true"></div>
+                    <div class="hero-decor hero-decor-2" aria-hidden="true"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-nosotros" aria-labelledby="sobre-nosotros-titulo" role="region">
+            <div class="contenedor">
+                <h2 id="sobre-nosotros-titulo">Misión y Visión</h2>
+                <p class="descripcion">
+                    Nuestra página está diseñada para que puedas conocer quiénes somos, qué hacemos y cómo podemos
+                    endulzar tus celebraciones, desde cualquier dispositivo y de manera rápida y sencilla.
+                </p>
+
+                <div class="tarjetas-mision-vision">
+                    <article class="tarjeta" aria-labelledby="mision-titulo">
+                        <h3 id="mision-titulo">Misión</h3>
+                        <p>
+                            Elaborar productos de repostería artesanal de alta calidad, ofreciendo experiencias dulces,
+                            personalizadas y memorables que superen las expectativas de nuestros clientes, manteniendo
+                            siempre un servicio cálido y cercano.
+                        </p>
+                    </article>
+
+                    <article class="tarjeta" aria-labelledby="vision-titulo">
+                        <h3 id="vision-titulo">Visión</h3>
+                        <p>
+                            Ser la pastelería de referencia en nuestra comunidad y a nivel nacional, reconocida por su
+                            creatividad, sabor, innovación y compromiso con la satisfacción de cada cliente.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="valores" aria-labelledby="valores-titulo" role="region">
+            <div class="contenedor">
+                <h2 id="valores-titulo">Nuestros valores</h2>
+                <p class="descripcion">
+                    En Dulce Tentación creemos que un buen postre no sólo debe verse bien, sino también transmitir
+                    dedicación, responsabilidad y amor por lo que hacemos.
+                </p>
+
+                <div class="tarjeta">
+                    <h3>Valores que nos guían</h3>
+                    <div class="valores-lista">
+                        <div class="valor-item">
+                            <div class="valor-icono" aria-hidden="true">💗</div>
+                            <div>
+                                <strong>Pasión por lo que hacemos</strong><br />
+                                Preparamos cada receta con dedicación, como si fuera para nuestra propia familia.
+                            </div>
+                        </div>
+                        <div class="valor-item">
+                            <div class="valor-icono" aria-hidden="true">🎨</div>
+                            <div>
+                                <strong>Creatividad</strong><br />
+                                Diseños únicos, temáticos y personalizados, adaptados a cada celebración.
+                            </div>
+                        </div>
+                        <div class="valor-item">
+                            <div class="valor-icono" aria-hidden="true">✅</div>
+                            <div>
+                                <strong>Calidad y frescura</strong><br />
+                                Utilizamos ingredientes seleccionados para asegurar sabor y textura excepcionales.
+                            </div>
+                        </div>
+                        <div class="valor-item">
+                            <div class="valor-icono" aria-hidden="true">🤝</div>
+                            <div>
+                                <strong>Compromiso y responsabilidad</strong><br />
+                                Respetamos tiempos de entrega y acuerdos, cuidando cada detalle del pedido.
+                            </div>
+                        </div>
+                        <div class="valor-item">
+                            <div class="valor-icono" aria-hidden="true">🌱</div>
+                            <div>
+                                <strong>Respeto</strong><br />
+                                Valoramos a nuestros clientes, colaboradores y comunidad, escuchando sus necesidades.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="productos" aria-labelledby="productos-titulo" role="region">
+            <div class="contenedor">
+                <h2 id="productos-titulo">Carrito de compras y menú de postres</h2>
+                <p class="descripcion">
+                    Explora algunos de nuestros productos estrella y agrégalos a tu carrito. Este carrito es una
+                    simulación pensada para mostrar el funcionamiento básico de compras en línea para fines académicos.
+                </p>
+
+                <div class="productos-layout">
+                    <div class="productos-grid" aria-label="Lista de productos destacados">
+                        <article class="producto" data-id="1" data-nombre="Pastel de chocolate clásico" data-precio="18.50">
+                            <div class="producto-header">
+                                <img src="img/pastel-chocolate.jpg"
+                                     alt="Pastel de chocolate clásico con cobertura cremosa y decoración sencilla">
+                                <div class="producto-info">
+                                    <h3>Pastel de chocolate clásico</h3>
+                                    <p>Bizcocho húmedo de chocolate con relleno cremoso y decoración sencilla.</p>
+                                    <div class="producto-precio">$18.50</div>
+                                    <span class="badge-pequeno">Ideal para 8-10 porciones</span>
+                                </div>
+                            </div>
+                            <div class="producto-boton">
+                                <button class="btn btn-primario btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </article>
+
+                        <article class="producto" data-id="2" data-nombre="Cupcakes surtidos" data-precio="12.00">
+                            <div class="producto-header">
+                                <img src="img/cupcakes-surtidos.jpg"
+                                     alt="Cupcakes surtidos de colores con decoraciones temáticas">
+                                <div class="producto-info">
+                                    <h3>Cupcakes surtidos (12 unidades)</h3>
+                                    <p>Sabores variados con decoraciones coloridas y temáticas.</p>
+                                    <div class="producto-precio">$12.00</div>
+                                    <span class="badge-pequeno">Vainilla, chocolate y fresa</span>
+                                </div>
+                            </div>
+                            <div class="producto-boton">
+                                <button class="btn btn-primario btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </article>
+
+                        <article class="producto" data-id="3" data-nombre="Cheesecake de frutos rojos" data-precio="20.00">
+                            <div class="producto-header">
+                                <img src="img/cheesecake-frutos-rojos.jpg"
+                                     alt="Cheesecake cubierto con salsa de frutos rojos">
+                                <div class="producto-info">
+                                    <h3>Cheesecake de frutos rojos</h3>
+                                    <p>Base de galleta, centro cremoso y cubierta de salsa de frutos rojos.</p>
+                                    <div class="producto-precio">$20.00</div>
+                                    <span class="badge-pequeno">Consulta opciones sin azúcar</span>
+                                </div>
+                            </div>
+                            <div class="producto-boton">
+                                <button class="btn btn-primario btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </article>
+
+                        <article class="producto" data-id="4" data-nombre="Galletas decoradas" data-precio="10.00">
+                            <div class="producto-header">
+                                <img src="img/galletas-decoradas.jpg"
+                                     alt="Galletas decoradas artesanalmente para eventos especiales">
+                                <div class="producto-info">
+                                    <h3>Galletas decoradas (12 unidades)</h3>
+                                    <p>Galletas de mantequilla decoradas a mano según la temática de tu evento.</p>
+                                    <div class="producto-precio">$10.00</div>
+                                    <span class="badge-pequeno">Perfectas para recuerdos</span>
+                                </div>
+                            </div>
+                            <div class="producto-boton">
+                                <button class="btn btn-primario btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <aside class="carrito" aria-label="Carrito de compras del usuario">
+                        <h3>Carrito de compras</h3>
+                        <p class="carrito-resumen">
+                            Ítems en el carrito: <strong id="cart-count-side">0</strong>
+                        </p>
+                        <div id="cart-items" class="carrito-items">
+                            <p class="carrito-vacio">Tu carrito está vacío. Agrega un producto para comenzar.</p>
+                        </div>
+                        <div class="carrito-total">
+                            <span>Total:</span>
+                            <strong id="cart-total">$0.00</strong>
+                        </div>
+                        <div class="carrito-acciones">
+                            <button class="btn btn-primario btn-mini" onclick="simularPedido()">
+                                Simular pedido
+                            </button>
+                            <button class="btn btn-secundario btn-mini" onclick="vaciarCarrito()">
+                                Vaciar carrito
+                            </button>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" aria-labelledby="contacto-titulo" role="region">
+            <div class="contenedor">
+                <h2 id="contacto-titulo">Contacto</h2>
+                <p class="descripcion">
+                    ¿Tienes una idea para un pastel personalizado o necesitas una cotización? Escríbenos y con gusto te
+                    responderemos. Este formulario es de demostración para fines académicos.
+                </p>
+
+                <div class="contacto-grid">
+                    <form id="contact-form" aria-label="Formulario de contacto de Dulce Tentación">
+                        <div class="form-grupo">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" required />
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="correo">Correo electrónico *</label>
+                            <input type="email" id="correo" name="correo" required />
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="telefono">Teléfono (opcional)</label>
+                            <input type="tel" id="telefono" name="telefono" />
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="mensaje">Mensaje / Detalle del pedido *</label>
+                            <textarea id="mensaje" name="mensaje" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primario">
+                            Enviar mensaje
+                        </button>
+                    </form>
+
+                    <div class="contacto-info">
+                        <p><strong>Horario de atención:</strong> Lunes a sábado, 9:00 a.m. a 7:00 p.m.</p>
+                        <p><strong>Ubicación:</strong> Panamá, área metropolitana (referencia académica).</p>
+                        <p><strong>Redes sociales:</strong></p>
+                        <div class="redes" aria-label="Enlaces a redes sociales">
+                            <a class="red" href="https://www.facebook.com/dulcetentacion20255/" target="_blank" rel="noopener noreferrer">
+                                <span class="icono" aria-hidden="true">👍</span>
+                                <span>Facebook</span>
+                            </a>
+                            <a class="red" href="https://www.instagram.com/dulce_tentacionpasteleria2025?igsh=MWVwN2kwdzBsa2NvNg==" target="_blank" rel="noopener noreferrer">
+                                <span class="icono" aria-hidden="true">📸</span>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                        <p style="margin-top:0.8rem; font-size:0.8rem; color:#777;">
+                            Nota: enlaces configurados a las cuentas oficiales de la pastelería.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer aria-label="Pie de página del sitio">
+        <div class="contenedor">
+            <div class="fila">
+                <span>© <span id="year"></span> Dulce Tentación. Todos los derechos reservados.</span>
+                <span>Desarrollado como proyecto académico.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Año automático en el pie de página
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Desplazamiento suave a secciones
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
+        // Lógica del carrito de compras (simulación)
+        const cart = {};
+
+        function actualizarCarrito() {
+            const cartCount = Object.values(cart).reduce((total, item) => total + item.cantidad, 0);
+            const cartTotal = Object.values(cart).reduce(
+                (total, item) => total + item.cantidad * item.precio,
+                0
+            );
+
+            document.getElementById("cart-count").textContent = cartCount;
+            document.getElementById("cart-count-side").textContent = cartCount;
+            document.getElementById("cart-total").textContent = "$" + cartTotal.toFixed(2);
+
+            const cartItemsContainer = document.getElementById("cart-items");
+            cartItemsContainer.innerHTML = "";
+
+            if (cartCount === 0) {
+                const p = document.createElement("p");
+                p.className = "carrito-vacio";
+                p.textContent = "Tu carrito está vacío. Agrega un producto para comenzar.";
+                cartItemsContainer.appendChild(p);
+                return;
+            }
+
+            Object.values(cart).forEach((item) => {
+                const row = document.createElement("div");
+                row.className = "carrito-item";
+
+                const nombreSpan = document.createElement("span");
+                nombreSpan.textContent = item.nombre + " x" + item.cantidad;
+
+                const precioSpan = document.createElement("span");
+                const subtotal = item.cantidad * item.precio;
+                precioSpan.textContent = "$" + subtotal.toFixed(2);
+
+                row.appendChild(nombreSpan);
+                row.appendChild(precioSpan);
+                cartItemsContainer.appendChild(row);
+            });
+        }
+
+        function agregarAlCarrito(id, nombre, precio) {
+            if (!cart[id]) {
+                cart[id] = { id, nombre, precio, cantidad: 0 };
+            }
+            cart[id].cantidad += 1;
+            actualizarCarrito();
+        }
+
+        function vaciarCarrito() {
+            for (const key in cart) {
+                delete cart[key];
+            }
+            actualizarCarrito();
+        }
+
+        function simularPedido() {
+            const cartCount = Object.values(cart).reduce((total, item) => total + item.cantidad, 0);
+            if (cartCount === 0) {
+                alert("Tu carrito está vacío. Agrega al menos un producto para simular el pedido.");
+                return;
+            }
+            alert(
+                "¡Gracias por tu interés en Dulce Tentación!\n\n" +
+                "Esta es una simulación de pedido para fines académicos.\n" +
+                "En una versión real, aquí se continuarían los datos de envío y pago."
+            );
+        }
+
+        document.querySelectorAll(".btn-agregar").forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+                const producto = e.target.closest(".producto");
+                const id = producto.getAttribute("data-id");
+                const nombre = producto.getAttribute("data-nombre");
+                const precio = parseFloat(producto.getAttribute("data-precio"));
+                agregarAlCarrito(id, nombre, precio);
+            });
+        });
+
+        // Manejo básico del formulario de contacto
+        document.getElementById("contact-form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert(
+                "¡Gracias por contactarnos!\n\n" +
+                "Tu mensaje ha sido registrado de forma simulada para este proyecto web.\n" +
+                "En una página real, sería enviado a nuestro correo."
+            );
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
